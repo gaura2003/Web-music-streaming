@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .play_pause {
+            display: flex;
+        }
+        img {
+            position: absolute;
+            width: 40px;
+        }
+
+        .play_pause img:nth-child(2) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <audio src="./Ben 10 Theme Hindi Ringtone.mp3"></audio>
+    <!-- <button>H</button> -->
+    <hr>
+    <div class="play_pause">
+        <img src="./images/play-solid.svg" alt="">
+        <img src="./images/pause-solid.svg" alt="">
+    </div>
+
+    <script>
+        let play_pause_btn = document.querySelector(".play_pause")
+        let play_img = document.querySelector(".play_pause img:nth-child(1)")
+        let pause_img = document.querySelector(".play_pause img:nth-child(2)")
+        let audio = document.querySelector("audio")
+        play_pause_btn.addEventListener("click", () => {
+            pause_img.style.display = "block";
+            if(play_img.style.display == "block"){
+                play_img.style.display = "none";
+                pause_img.style.display = "block";
+                audio.play();
+            }
+            else if(pause_img.style.display == "block"){
+                play_img.style.display = "block";
+                pause_img.style.display = "none";
+                audio.pause();
+            }
+        })
+    </script>
+</body>
+
+</html>

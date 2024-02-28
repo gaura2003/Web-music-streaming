@@ -2,7 +2,7 @@ body {
   background-color: #000;
   justify-content: center;
   text-align: center;
-  height: 100px;
+  
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
 input::placeholder {
   font-weight: bold;
   opacity: 0.5;
-  font-size: 40px;
+
 }
 
 .form-container {
@@ -27,8 +27,7 @@ input::placeholder {
 
 h2 {
   margin-bottom: 20px;
-  margin-top: 600px;
-  font-size: 60px;
+
 }
 
 input {
@@ -36,9 +35,7 @@ input {
   padding:10px ;
   border-radius: 5px;
   border: none;
-  width: 600px;
-  height: 60px;
-  font-size: 40px;
+ 
 }
 
 button {
@@ -47,7 +44,7 @@ button {
   border: none;
   background-color: #ff00ff;
   color: #fff;
-  font-size: 40px;
+  
 }
 
 a {
@@ -55,7 +52,7 @@ a {
   text-decoration: none;
   display: block;
   margin-bottom: 10px;
-  font-size: 40px;
+  
 }
 
 a:hover {
