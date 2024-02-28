@@ -78,6 +78,13 @@
         <div class="card-title">Song title</div>
         <div class="card-subtitle">Honey Singh</div>
         </div>
+        <div class="music-card">
+        <div style="overflow: hidden;">
+            <img src="../images\yo-yo-honey-singh-1.jpg" alt="">
+        </div>
+        <div class="card-title">Song title</div>
+        <div class="card-subtitle">Arjit Singh</div>
+        </div>
     </section>
 
    
