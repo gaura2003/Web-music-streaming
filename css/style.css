@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+body img {
+    width: 100%;
+
+}
+
+body {
+    min-width: 350px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+}
+
+.logo-holder {
+    width: 100px;
+}
+
+.main-title {
+    margin-top: 5px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header-div {
+    flex: auto;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    padding: 10px;
+    text-align: center;
+    min-width: 80px;
+}
+
+header .active {
+    border-bottom: solid 4px red;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-list {
+    position: absolute;
+    border: solid thin #ccc;
+    background-color: white;
+}
+
+.banner {
+    height: 500px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 4px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(216, 201, 239);
+}
+
+.music-card img:hover {
+    transform: scale(1.5);
+}
+
+.music-card img {
+    height: 200px;
+    object-fit: cover;
+    transition: all .5s ease;
+}
+
+.music-card {
+    width: 200px;
+    margin: 20px;
+}
+
+.card-content {
+    padding: 4px;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-subtitle {
+    opacity: 0.7;
+}
+
+footer a {
+    color: white;
+}
+
+footer {
+    padding: 20px;
+    background-color: #444;
+    display: flex;
+}
+
+.footer-div {
+    flex: 1;
+    padding: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: solid thin #ccc;
+    border-radius: 10px;
+
+}
+
+.btn {
+    border: none;
+    padding: 2px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: blue;
+    font-size: 17px;
+
+}
+
+.form-group {
+    display: flex;
+}
+
+.section-tilte {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/* Hide the dropdown menu by default */
+.dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    perspective: 1000px;
+    display: none;
+}
+
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+
+.nav-item:hover {
+    background-color: #ddd;
+}
+
+.bi {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.socials {
+    flex: auto;
+    text-align: right;
+}
+
+@media (max-width:768px) {
+    .logo-holder {
+        width: 50px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:600px) {
+    header {
+        flex-direction: column;
+    }
+
+    .music-card img {
+        height: 80px;
+        object-fit: cover;
+        transition: all .5s ease;
+    }
+
+    .music-card {
+        width: 80px;
+        margin: 10px;
+    }
+
+    .card-title {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .card-subtitle {
+        opacity: 0.7;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .banner {
+        height: 100px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    /* width:; */
+
+    .content-dash {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(216, 201, 239);
+    }
+
+    .main-nav-a {
+        background-color: #444;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-nav-a a {
+        background-color: #444;
+        color: #ccc;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

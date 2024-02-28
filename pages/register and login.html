@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login/Register Page</title>
+  <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<?php include '../pages/includes/header.php'; ?>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <form id="login-form" method="post" action="home.php">
+        <h2>Login</h2>
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit" href="home.php">Login</button>
+        <a href="#" onclick="showRegisterForm()">Don't have an account? Register here</a>
+        <a href="#" onclick="showForgotPasswordForm()">Forgot password?</a>
+      </form>
+
+      <form id="register-form" method="post" action="register and login.html">
+        <h2>Register</h2>
+        <input type="text" name="username" placeholder="Username" required><br>
+         <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
+        
+        <button type="submit" onclick="window.location.href='home.php'">Register</button>
+        <a href="#" onclick="showLoginForm()">Already have an account? Login here</a>
+      </form>
+
+      <form id="forgot-password-form" method="post" action="forgot_password.php">
+        <h2>Forgot Password</h2>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Reset Password</button>
+        <a href="#" onclick="showLoginForm()">Remembered your password? Login here</a>
+      </form>
+    </div>
+  </div>
+  <?php include  '../pages/includes/footer.php'; ?>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // Validate the username and password
+    // You can add your own validation logic here
+
+    if ($username == "admin" && $password == "password") {
+        // Successful login
+        echo "Login successful!";
+    } else {
+        // Invalid credentials
+        echo "Invalid username or password!";
+    }
+}
+?>
+  <script src="../js/login.js"></script>
+</body>
+</html>
