@@ -80,7 +80,7 @@
         </div>
         <div class="music-card">
         <div style="overflow: hidden;">
-            <img src="../images\yo-yo-honey-singh-1.jpg" alt="">
+            <img src="../images\arjit singh.webp" alt="">
         </div>
         <div class="card-title">Song title</div>
         <div class="card-subtitle">Arjit Singh</div>
