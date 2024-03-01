@@ -1,7 +1,7 @@
 body {
-  background-color: #000;
   justify-content: center;
   text-align: center;
+  background-image: url('https://media.istockphoto.com/id/1297013252/photo/music-player-on-mobile-phone-with-earphones.jpg?s=1024x1024&w=is&k=20&c=qAb2Q22TqLs26NXALT0ANM92wtHh3ddR-prUn7wHZx8=');
   
 }
 
@@ -9,6 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
  
 }
 input::placeholder {
@@ -18,7 +19,7 @@ input::placeholder {
 }
 
 .form-container {
-  background-color: #000;
+  background-color:;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -43,7 +44,7 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  background-color: #ff00ff;
+  background-color: saddlebrown;
   color: #fff;
   
 }
