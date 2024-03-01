@@ -54,7 +54,7 @@ echo '<html>
                         <div class="nav-item"><a href="">Profile</a></div>
                         <div class="nav-item"><a href="">Playlists</a></div>
                         <div class="nav-item"><a href="">Settings</a></div>
-                        <div class="nav-item"><a href="../pages/login.php">Logout</a></div>
+                        <div class="nav-item"><a href="../pages/register and login.html">Logout</a></div>
 
                     </div>                   
                     </div>
