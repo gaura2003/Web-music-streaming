@@ -1,62 +1,72 @@
 body {
-  justify-content: center;
-  text-align: center;
-  background-image: url('https://media.istockphoto.com/id/1297013252/photo/music-player-on-mobile-phone-with-earphones.jpg?s=1024x1024&w=is&k=20&c=qAb2Q22TqLs26NXALT0ANM92wtHh3ddR-prUn7wHZx8=');
-  
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
- 
-}
-input::placeholder {
-  font-weight: bold;
-  opacity: 0.5;
-
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slide-up 0.5s ease;
 }
 
-.form-container {
-  background-color:;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  color: #fff;
+@keyframes slide-up {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 h2 {
-  margin-bottom: 20px;
-  margin-top: 200px;
-
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-input {
-  margin-bottom: 10px;
-  padding:10px ;
-  border-radius: 5px;
-  border: none;
- 
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: saddlebrown;
-  color: #fff;
-  
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 10px;
-  
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
 }
 
-a:hover {
-  text-decoration: underline;
+.register-toggle {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
 }

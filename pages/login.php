@@ -3,366 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="images\style.css">
-    <title>Web Music Player</title>
-    <style>
-      *{
-    box-sizing: border-box;
-}
-body img{
-    width: 100%;
-
-}
-body{
-min-width: 350px;
-margin: 0px;
-padding: 0px;
-}
-body a{
-    text-decoration: none;
-}
-header{
-    display:flex;
-}
-.logo-holder{
-width: 100px;
-}
-.main-title{
-    margin-top: 5px;
-    font-size: 25px;
-    font-weight: bold;
-}
-.header-div{
-flex: auto;
-}
-.main-nav{
-display: flex;
-flex-wrap: wrap;
-}
-.nav-item{
-padding: 10px;
-text-align: center;
-min-width: 80px;
-}
-header .active{
-border-bottom:  solid 4px red;
-}
-.dropdown{
-position: relative;
-}
-.dropdown-list{
-position: absolute;
-border: solid thin #ccc;
-background-color: white;
-}
-.hero{
-height: 500px;
-object-fit: cover;
-}
-.content{
-padding: 4px 20px;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-background-color:rgb(216, 201, 239) ;
-}
-.music-card img:hover{
-transform: scale(1.5);
-}
-.music-card img{
-height: 200px;
-object-fit: cover;
-transition: all .5s ease;
-}
-.music-card{
-width: 200px;
-margin: 20px;
-}
-.card-content{
-padding: 4px;
-}
-.card-title{
-font-size: 18px;
-}
-.card-subtitle{
-opacity: 0.7;
-}
-footer a{
-color: white;
-}
-footer{
-padding: 20px;
-background-color: #444;
-display: flex;
-}
-.footer-div{
-flex:1;
-padding: 10px;
-}
-.form-control{
-width: 100%;
-padding: 10px;
-border: solid thin #ccc;
-border-radius: 10px;
-
-}
-.btn{
-border: none;
-padding: 2px 20px;
-cursor: pointer;
-border-radius: 20px;
-background-color: blue;
-font-size: 17px;
-
-}
-.form-group{
-display: flex;
-}
-.section-tilte{
-margin-left: 20px;
-font-size: 20px;
-font-weight: bolder;
-}
-/* Hide the dropdown menu by default */
-.dropdown-list {
-position: absolute;
-top: 100%;
-left: 0;
-width: 100%;
-perspective: 1000px;
-display: none;
-}
-
-.dropdown:hover .dropdown-list {
-display: block;
-}
-.nav-item:hover{
-background-color: #ddd;
-}
-.bi{
-margin: 5px ;
-width: 25px;
-height: 25px;
-}
-.socials{
-flex: auto;
-text-align: right;
-}
-@media (max-width:768px) {
-header{
-flex-direction: column;
-}
-footer{
-flex-direction: column;
-}
-
-}
-@media (max-width:600px) {
-header{
-flex-direction: column;
-}
-.music-card img{
-height: 80px;
-object-fit: cover;
-transition: all .5s ease;
-}
-.music-card{
-width: 80px;
-margin: 10px;
-}
-.card-title{
-font-size: 15px;
-text-align: center;
-}
-.card-subtitle{
-opacity: 0.7;
-font-size: 15px;
-text-align: center;
-}
-.hero{
-height: 100px;
-}
-footer{
-flex-direction: column;
-}
-section .login-holder{
-flex-direction: column;
-}
-
-}
-.bg-blue{
-    background-color:goldenrod;
-    color: white;
-}
-.bg-orange{
-    background-color:orange;
-    color: white;
-}
-.bg-red{
-    background-color:red;
-    color: white;
-}
-.content-1{
-    padding: 100px 20px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    background-color:rgb(216, 201, 239) ;
-    }
-    .email{
-        background-color: #ccc;
-        border-radius: 5px;
-        text-align: center;
-    }
-    .pass{
-        background-color: #ccc;
-        border-radius: 5px;
-        text-align: center;
-        margin: 10px;
-        margin-bottom: 20px;
-    }
-    .content-dash{
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        background-color:rgb(216, 201, 239) ;
-        }
-        .main-nav-a{
-            background-color: #444;
-            display: flex;
-            flex-wrap: wrap;
-            }
-        .main-nav-a a{
-            background-color: #444;
-            color: #ccc;
-            display: flex;
-            flex-wrap: wrap;
-            }
-    </style>
-    
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
-    <!-- this is change try  -->
-    <header>
-        <div class="logo-holder">
-       <a><img src="images\music app logo.jpg" alt=""></a>
-        </div>
-        <div class="header-div">
-            <div class="main-title">
-                Web Music App
-         <div class="socials">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="navy" class="bi bi-facebook" viewBox="0 0 16 16">
-                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="pink" class="bi bi-instagram" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-messenger" viewBox="0 0 16 16">
-                        <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-youtube" viewBox="0 0 16 16">
-                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                      </svg>
-                </div>
-            </div>
-            
-            <div class="main-nav">
-                <div class="nav-item active"><a href="../pages/home.php">Home</a></div>
-                <div class="nav-item"><a href="">Music</a></div>
-                <div class="nav-item dropdown"><a href="">Category</a>
-                <div class="dropdown-list">
-                    <div class="nav-item"><a href="">Pop Songs</a></div>
-                    <div class="nav-item"><a href="">Party Songs</a></div>
-                    <div class="nav-item"><a href="">Love Songs</a></div>
-                    <div class="nav-item"><a href="">Old Songs</a></div>
-                    <div class="nav-item"><a href="">19'S Songs</a></div>
-                    <div class="nav-item"><a href="">20'S Songs</a></div>
-                    <div class="nav-item"><a href="">New Songs</a></div>
-                    
-                </div>
-                </div>
-                <div class="nav-item"><a href="">Artist</a></div>
-                <div class="nav-item"><a href="">About us</a></div>
-                <div class="nav-item"><a href="">Contact us</a></div>
-                <div class="nav-item dropdown"><a href="">Hi ,User</a>
-                    <div class="dropdown-list">
-                        <div class="nav-item"><a href="">Profile</a></div>
-                        <div class="nav-item"><a href="">Playlists</a></div>
-                        <div class="nav-item"><a href="">Settings</a></div>
-                        <div class="nav-item"><a href="">Logout</a></div>
-
-                    </div>
-                    </div>
-                    </div>
-                    <div>
-
-        
-    </header>
-    <section class="content-1">
-        <div class="login-holder">
-        <form method="post">
-            <center><img src="images\music app logo.jpg" alt="" style="width: 150px; border-radius: 50px; border: solid thin ;"></center>
-            <h2>Login</h2>
-            <input class="email" type="email" name="email" id="email" placeholder="Email"><br>
-            <input class="pass" type="password" name="password" id="password" placeholder="Password"><br>
-            <button class="btn bg-blue">Login</button>
-        </div>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="home.php" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
         </form>
-    </section>
-    
-
-    <footer>
-        <div class="footer-div">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Musics</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Content</a></li>
-                <li><a href="./pages/login.php">Login</a></li>
-            </ul>
-        </div>
-        <div class="footer-div">
-            <form action="">
-                <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Search for Music " name="find" id="">
-                    <button class="btn">Search</button>
-                
-                </div>
-            </form>
-        </div>
-        <div class="footer-div">
-            Follow Us :
-            <br><br>
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="navy" class="bi bi-facebook" viewBox="0 0 16 16">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="pink" class="bi bi-instagram" viewBox="0 0 16 16">
-                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-messenger" viewBox="0 0 16 16">
-                <path d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-youtube" viewBox="0 0 16 16">
-                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
-              </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-              </svg>
-
-        </div>
-    </footer>
+    </div>
 </body>
-
 </html>
+<?php
+session_start();
+
+// Database connection details
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "users";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Process login form data
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    
+    // Retrieve user from database
+    $sql = "SELECT * FROM 'Registration' WHERE email='$email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['email'] = $email;
+            echo "Login successful";
+        } else {
+            echo "Invalid password";
+        }
+    } else {
+        echo "User not found";
+    }
+}
+
+// Close connection
+$conn->close();
+?>
