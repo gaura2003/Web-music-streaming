@@ -11,3 +11,5 @@ function pages($file){
 
     return "..\pages\\".$file.".php";
 }
+
+?>

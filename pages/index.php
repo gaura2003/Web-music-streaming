@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "../code files\init.php";
+require "..\code files\init.php";
 
 // this is some xchanges
 $URl = $_GET['url']?? "home";
