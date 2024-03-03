@@ -1,23 +1,6 @@
 <?php
 echo '<footer>
-        <div class="footer-div">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Musics</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Content</a></li>
-                <li><a href="">Login</a></li>
-            </ul>
-        </div>
-        <div class="footer-div">
-            <form action="">
-                <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Search for Music " name="find" id="">
-                    <button class="btn">Search</button>
-                
-                </div>
-            </form>
-        </div>
+       
         <div class="footer-div">
             Follow Us :
             <br><br>
