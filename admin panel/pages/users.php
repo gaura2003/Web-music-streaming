@@ -60,8 +60,8 @@
                         echo "<td>" . $row["phone"] . "</td>";
                         echo "<td>" . $row["reg_date"] . "</td>";
                         echo "<td>";
-                        echo "<a href='edit_user.php?id=" . $row["id"] . "' onclick='return confirmEdit();'> Edit</a> | ";
-                        echo "<a href='delete_user.php?id=" . $row["id"] . "' onclick='return confirmDelete();'>Delete</a>";
+                        echo "<a href='process files/edit_user.php?id=" . $row["id"] . "' onclick='return confirmEdit();'> Edit</a> | ";
+                        echo "<a href='process files/delete_user.php?id=" . $row["id"] . "' onclick='return confirmDelete();'>Delete</a>";
                         echo "</td>";
                         echo "</tr>";
                     }
