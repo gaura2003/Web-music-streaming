@@ -43,10 +43,14 @@ $conn->close();
   .artist {
     display: inline-block;
     margin-right: 20px;
-    background-color: white;
     width:150px;
     padding: 20px;
     margin: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        text-align: center;
   }
   .artist img {
   width:100px;
@@ -54,23 +58,28 @@ $conn->close();
     max-width: 100px;
     cursor: pointer;
   }
-  h3{
-      padding: 0px;
-      margin: 0px;
-  }
+ h6 {
+        padding-top: 10px;
+        margin: 0px;
+        white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;  
+    }
+    
+   a{
+     text-decoration: none;
+    text-decoration-color: black;  
+   }
 </style>
 </head>
 <body>
 
 <div class="artists-container">
   <?php foreach($data as $artist): ?>
-  <div class="artist">
+  <div class="artist" >
       <img src="<?php echo $artist['image']; ?>" onclick="zoomImage(this)" alt="<?php echo $artist['name']; ?>">
   
-    <h3><a href="artist_details.php?id=<?php echo $artist['id']; ?>"><?php echo $artist['name']; ?></a></h3>
-    
-    <p class="bio" style="display: none;"><?php echo $artist['bio']; ?></p>
-  
+    <h6><a href="artist_details.php?id=<?php echo $artist['id']; ?>"><?php echo $artist['name']; ?></a></h6>
     
   </div>
   <?php endforeach; ?>
@@ -81,17 +90,6 @@ function zoomImage(img) {
   window.open(img.src, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
 }
 
-function showBio(button) {
-  var bioElement = button.parentNode.nextElementSibling;
-  if (bioElement.style.display === "none") {
-    bioElement.style.display = "block";
-    button.textContent = "Hide Bio";
-  } else {
-    bioElement.style.display = "none";
-    button.textContent = "See Bio";
-  }
-}
 </script>
-
 </body>
 </html>

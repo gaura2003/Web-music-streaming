@@ -1,46 +1,45 @@
 <?php
-// Check if the form was submitted
+// Database connection details
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "users";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Process registration form data
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $password = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash password for security
     $confirm_password = $_POST['confirm_password'];
-    
-    // Validate password
-    if ($password !== $confirm_password) {
-        die("Passwords do not match");
-    }
-    
-    // Hash password for security
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-    
-    // Database connection details
-    $servername = "localhost";
-    $username = "root";
-    $password = ""; // Replace with your MySQL password
-    $database = "users";
+    $reg_date = $_POST['reg_date'];
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $database);
+    // Check if email already exists
+    $check_email_sql = "SELECT * FROM `Registration` WHERE email='$email'";
+    $email_result = $conn->query($check_email_sql);
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Prepare SQL statement
-    $sql = "INSERT INTO `Registration`(`name`, `email`, `phone`, `password`, `reg_date`) VALUES ('$name','$email','$phone','$hashed_password', NOW())";
-
-    // Execute SQL statement
-    if ($conn->query($sql) === TRUE) {
-        echo "Registration successful";
+    if ($email_result->num_rows > 0) {
+        echo "<h1>Email already exists. Please use a different email.</h1>";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+        // Insert user into the database
+        $sql = "INSERT INTO `Registration`(`name`, `email`, `phone`, `password`, `reg_date`) VALUES ('$name','$email','$phone','$password','$reg_date')";
 
-    // Close connection
-    $conn->close();
+        if ($conn->query($sql) === TRUE) {
+            echo "Registration successful";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
 }
+
+// Close connection
+$conn->close();
 ?>
